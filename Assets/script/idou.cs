@@ -24,6 +24,9 @@ public class idou : MonoBehaviour{
 
     public static bool speed;
     float speedtime = 10f;
+
+    int score;
+    public Text ScoreText;
     // Start is called before the first frame update
     void Start(){
         rb = GetComponent<Rigidbody2D>();
@@ -41,7 +44,7 @@ public class idou : MonoBehaviour{
             speed = false;
             speedtime = 10f;
         }
-        
+        ScoreText.text = "コイン"+score;
         
         HPtext.text = "体力 "+HP;
         if(HP <= 0){
@@ -93,6 +96,10 @@ public class idou : MonoBehaviour{
             if(HP < 3){
                 HP += 1; 
             }
+            Destroy(other.gameObject);
+        }
+        if(other.gameObject.tag == "coin"){
+            score += 10;
             Destroy(other.gameObject);
         }
     }

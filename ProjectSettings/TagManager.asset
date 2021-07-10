@@ -8,6 +8,7 @@ TagManager:
   - dolly
   - speed
   - kaihuku
+  - coin
   layers:
   - Default
   - TransparentFX

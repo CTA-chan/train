@@ -6,7 +6,7 @@ public class particleCreate : MonoBehaviour{
 
     public GameObject paricle;
 
-    bool par;
+    public static bool par;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,9 +22,6 @@ public class particleCreate : MonoBehaviour{
                 Instantiate(paricle, this.transform.position, Quaternion.identity);
                 par = false;
             }
-        }else{
-            Destroy(pae);
-            par = true;
         }
     }
 }
