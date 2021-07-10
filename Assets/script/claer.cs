@@ -8,8 +8,9 @@ public class claer : MonoBehaviour{
     
     GameObject[] goals = new GameObject[4];
 
-    string[] TITLE = {"英雄豪傑","平平凡凡","満身創痍"};
+    string[] TITLE = {"英雄豪傑","平平凡凡","満身創痍","一敗塗地"};
     public static string title;
+    public static string tit;
 
     public static bool clae;
 
@@ -24,6 +25,8 @@ public class claer : MonoBehaviour{
     public Text TimeText;
     // Start is called before the first frame update
     void Start(){        
+        tit = TITLE[3];
+
         R = Random.Range(0,3);
 
         obj.gameObject.SetActive(false);
@@ -69,18 +72,17 @@ public class claer : MonoBehaviour{
     void OnCollisionEnter2D(Collision2D other){
         if(other.gameObject.tag == "player"){
             if(timer == false){    
-                if(idou.HP == 1){
-                     title = TITLE[2];
-                }else{
-                    if(idou.HP == 2){
-                         title = TITLE[1];
-                    }else{
-                        if(idou.HP == 3){
-                             title = TITLE[0];
+                    if(idou.HP == 1){
+                        title = TITLE[2];
+                        }else{
+                            if(idou.HP == 2){
+                                title = TITLE[1];
+                            }else{
+                                if(idou.HP == 3){
+                                    title = TITLE[0];
+                            }
                         }
                     }
-                }
-                Debug.Log("Tag:"+other.gameObject.tag);
                 SceneManager.LoadScene("result");
                 Debug.Log(idou.HP+"だから"+title);
                 clae = true;

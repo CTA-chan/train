@@ -835,6 +835,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Scor: {fileID: 552383109}
+  sco: {fileID: 1376963323}
 --- !u!4 &1473245649
 Transform:
   m_ObjectHideFlags: 0

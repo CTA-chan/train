@@ -39,7 +39,7 @@ public class item : MonoBehaviour{
 
         if(ite == true){
             if(r == true){
-                R = Random.Range(0,4);
+                R = Random.Range(0,3);
                 r = false;
             }
             I = Ran[R];
