@@ -27,11 +27,19 @@ public class idou : MonoBehaviour{
 
     public static int scor;
     public Text ScoreText;
+    
+    public Sprite spriteMae;
+    public Sprite spriteAto;
+    SpriteRenderer s ;
+
     // Start is called before the first frame update
     void Start(){
         rb = GetComponent<Rigidbody2D>();
         HP = 3;
         tsu = false;
+        
+        s = gameObject.GetComponent<SpriteRenderer>();
+        s.sprite = spriteMae;
     }
 
     // Update is called once per frame
@@ -82,7 +90,8 @@ public class idou : MonoBehaviour{
         rb.AddForce (force); // 力を加える
         }
         rb.AddForce(moveForceMultiplier * (moveVector - rb.velocity));//
-    }
+    
+        }
     void OnCollisionEnter2D(Collision2D other){
         if (other.gameObject.tag == "dolly"){
             HP -= 1;
@@ -101,6 +110,6 @@ public class idou : MonoBehaviour{
         if(other.gameObject.tag == "coin"){
             scor += 10;
             Destroy(other.gameObject);
+            }
         }
     }
-}
