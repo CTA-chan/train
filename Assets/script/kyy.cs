@@ -17,7 +17,7 @@ public class kyy : MonoBehaviour{
 
     // Update is called once per frame
     void Update(){
-        if(Input.GetKey(KeyCode.P)){
+        if(idou.sayu == 0 && idou.zyou == 0){
             s.sprite = spriteAto;
         }else{
             s.sprite = spriteMae;
