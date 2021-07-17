@@ -12,7 +12,6 @@ public class item : MonoBehaviour{
     public GameObject S;
     public GameObject C;
     int R;
-    bool r;
     GameObject[] Ran = new GameObject[3];
 
     // Start is called before the first frame update
@@ -21,7 +20,6 @@ public class item : MonoBehaviour{
         Ran[0] = K;
         Ran[1] = S;
         Ran[2] = C;
-        r = true;
         ite = false;
         tim = 15f;
     }
@@ -38,10 +36,7 @@ public class item : MonoBehaviour{
         }
 
         if(ite == true){
-            if(r == true){
-                R = Random.Range(0,3);
-                r = false;
-            }
+            R = Random.Range(0,3);
             I = Ran[R];
             Instantiate(I, new Vector2(Random.Range(-4f,4f),Random.Range(-4f,4f)), Quaternion.identity);
             ite = false;
