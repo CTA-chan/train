@@ -8,17 +8,14 @@ public class Score : MonoBehaviour{
     public Text Scor;
     public Text sco;
 
+    string s;
     // Start is called before the first frame update
     void Start(){
-        
+        Scor.text = claer.title;
+        sco.text = "スコア"+idou.scor;
     }
 
     // Update is called once per frame
     void Update(){
-        Scor.text = claer.title;
-        if(idou.tsu == true){
-            Scor.text = "一敗塗地";
-        }
-        sco.text = "スコア"+idou.scor;
     }
 }

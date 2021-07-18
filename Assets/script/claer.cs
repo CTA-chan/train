@@ -8,7 +8,7 @@ public class claer : MonoBehaviour{
     
     GameObject[] goals = new GameObject[4];
 
-    string[] TITLE = {"英雄豪傑","平平凡凡","満身創痍"};
+    string[] TITLE = {"英雄豪傑","平平凡凡","満身創痍","一敗塗地"};
     public static string title;
 
     public static bool clae;

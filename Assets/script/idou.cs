@@ -88,6 +88,9 @@ public class idou : MonoBehaviour{
     void OnCollisionEnter2D(Collision2D other){
         if (other.gameObject.tag == "dolly"){
             HP -= 1;
+            if(HP == 0){
+                    claer.title = "一敗塗地";
+                }
         }
         if(other.gameObject.tag == "speed"){
             speed = true;
