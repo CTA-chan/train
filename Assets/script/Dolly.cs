@@ -17,7 +17,7 @@ public class Dolly : MonoBehaviour{
     bool Track;
     public static bool des;
 
-    float time = 5f;
+    float time;
 
     Rigidbody2D rb;
     // Start is called before the first frame update
@@ -27,6 +27,7 @@ public class Dolly : MonoBehaviour{
         player = GameObject.Find("player");
         dolly = this.gameObject;
         Track = true;
+        time = Random.Range(1f,5f)+5f;
         des = false;
     }
 

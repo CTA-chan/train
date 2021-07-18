@@ -6,22 +6,16 @@ public class particleCreate : MonoBehaviour{
 
     public GameObject paricle;
 
-    public static bool par;
+    
     // Start is called before the first frame update
-    void Start()
-    {
-        par = true;
+    void Start(){
+    this.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
     void Update(){
-        GameObject pae = GameObject.Find("run");
-
         if(idou.speed == true){
-            if(par == true){
-                Instantiate(paricle, this.transform.position, Quaternion.identity);
-                par = false;
-            }
+            this.gameObject.SetActive(true);
         }
     }
 }

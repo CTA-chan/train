@@ -32,7 +32,7 @@ public class item : MonoBehaviour{
         
         if(tim <= 0){
             ite = true;
-            tim = 10f;
+            tim = Random.Range(1f,5f)+5f;
         }
 
         if(ite == true){

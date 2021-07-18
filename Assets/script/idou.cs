@@ -28,22 +28,26 @@ public class idou : MonoBehaviour{
     public static int scor;
     public Text ScoreText;
     
+    public GameObject paricle;
+
     // Start is called before the first frame update
     void Start(){
+        paricle.gameObject.SetActive(false);
         rb = GetComponent<Rigidbody2D>();
         HP = 3;
         tsu = false;
-        
     }
 
     // Update is called once per frame
     void Update(){
         if(speed == true){
             speedtime -= Time.deltaTime;
+            paricle.gameObject.SetActive(true);
         }
         if(speedtime <= 0){
             moveSpeed = 5;
             speed = false;
+            paricle.gameObject.SetActive(false);
             speedtime = 10f;
         }
         ScoreText.text = "コイン "+scor;
@@ -90,6 +94,8 @@ public class idou : MonoBehaviour{
             HP -= 1;
             if(HP == 0){
                     claer.title = "一敗塗地";
+                    paricle.gameObject.SetActive(false);
+                    Debug.Log("BBBB");
                 }
         }
         if(other.gameObject.tag == "speed"){

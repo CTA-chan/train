@@ -8,7 +8,7 @@ public class claer : MonoBehaviour{
     
     GameObject[] goals = new GameObject[4];
 
-    string[] TITLE = {"英雄豪傑","平平凡凡","満身創痍","一敗塗地"};
+    string[] TITLE = {"英雄豪傑","平平凡凡","満身創痍"};
     public static string title;
 
     public static bool clae;
@@ -20,6 +20,8 @@ public class claer : MonoBehaviour{
 
     GameObject i;
     int R;
+
+    public GameObject paricle;
 
     public Text TimeText;
     // Start is called before the first frame update
@@ -69,7 +71,9 @@ public class claer : MonoBehaviour{
     }
     void OnCollisionEnter2D(Collision2D other){
         if(other.gameObject.tag == "player"){
-            if(timer == false){    
+            if(timer == false){     
+                paricle.gameObject.SetActive(false);
+                Debug.Log("AAAA");        
                     if(idou.HP == 1){
                         title = TITLE[2];
                         }else{

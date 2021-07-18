@@ -37,7 +37,7 @@ public class Create : MonoBehaviour{
         
         if(tim <= 0){
             cre = true;
-            tim = 10f;
+            tim = Random.Range(1f,5f)+5f;;
         }
 
         if(cre == true){

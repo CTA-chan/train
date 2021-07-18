@@ -12,9 +12,5 @@ public class particle : MonoBehaviour
     void Update(){
        GameObject PA = GameObject.Find("player"); 
        this.transform.position = PA.transform.position;
-        if(idou.speed == false){
-            Destroy(gameObject);
-            particleCreate.par = true;
-        }
     }
 }
