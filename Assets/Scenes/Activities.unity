@@ -1497,25 +1497,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!95 &803062576
-Animator:
-  serializedVersion: 3
+--- !u!114 &803062576
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 803062575}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6ae6e44d4cda24ed79fab1ba41984b53, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 000bad6604d574720b3a330ddf873105, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteUe: {fileID: 21300000, guid: 28526f91c92124d6c89c7b8c6ffc7222, type: 3}
+  spriteSita: {fileID: 21300000, guid: 2aa91823622e74630bb385722c4660fb, type: 3}
+  spriteHidari: {fileID: 21300000, guid: 2aa91823622e74630bb385722c4660fb, type: 3}
+  spriteMigi: {fileID: 21300000, guid: cec3beafcf1ca4f9eb54427dbfe542b4, type: 3}
 --- !u!212 &803062577
 SpriteRenderer:
   m_ObjectHideFlags: 0

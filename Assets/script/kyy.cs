@@ -4,23 +4,35 @@ using UnityEngine;
 
 public class kyy : MonoBehaviour{
 
-    public Sprite spriteMae;
-    public Sprite spriteAto;
+    public Sprite spriteUe;
+    public Sprite spriteSita;
+    public Sprite spriteHidari;
+    public Sprite spriteMigi;
     SpriteRenderer s ;
 
     // Start is called before the first frame update
     void Start()
     {
         s = gameObject.GetComponent<SpriteRenderer>();
-        s.sprite = spriteMae;
+        s.sprite = spriteSita;
     }
 
     // Update is called once per frame
     void Update(){
-        if(idou.sayu == 0 && idou.zyou == 0){
-            s.sprite = spriteAto;
+        if(idou.zyou > 0){
+            s.sprite = spriteUe;
         }else{
-            s.sprite = spriteMae;
+            if(idou.zyou < 0){
+            s.sprite = spriteSita;
+            }else{
+                if(idou.sayu > 0){
+                s.sprite = spriteMigi;
+                }else{
+                    if(idou.sayu < 0){
+                    s.sprite = spriteSita;
+                    }   
+                }     
+            }
         }
     }
 }
