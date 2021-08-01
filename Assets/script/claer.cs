@@ -36,8 +36,8 @@ public class claer : MonoBehaviour{
         goals[1] = GameObject.Find("G2");
         goals[2] = GameObject.Find("G3");
         goals[3] = GameObject.Find("G4");
-
-        time = 20f;
+        
+        time = 60f;
         timer = true;
         clae = false;
     }
@@ -63,6 +63,7 @@ public class claer : MonoBehaviour{
         if(time <= 0){
             if(timer == true){
                 transform.position = r.transform.position;            
+                transform.rotation = r.transform.rotation;
                 obj.gameObject.SetActive(true);
                 GetComponent<BoxCollider2D>().enabled = true;
             }
@@ -72,8 +73,7 @@ public class claer : MonoBehaviour{
     void OnCollisionEnter2D(Collision2D other){
         if(other.gameObject.tag == "player"){
             if(timer == false){     
-                paricle.gameObject.SetActive(false);
-                Debug.Log("AAAA");        
+                paricle.gameObject.SetActive(false);     
                     if(idou.HP == 1){
                         title = TITLE[2];
                         }else{

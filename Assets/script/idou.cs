@@ -11,7 +11,7 @@ public class idou : MonoBehaviour{
     public float minX;
     
     public float moveForceMultiplier;  //追従度
-    public float moveSpeed;     //移動速度
+    public float moveSpeed = 4;     //移動速度
 
     private Rigidbody2D rb;
     public static float sayu;
@@ -32,6 +32,7 @@ public class idou : MonoBehaviour{
 
     // Start is called before the first frame update
     void Start(){
+        speed = false;
         paricle.gameObject.SetActive(false);
         rb = GetComponent<Rigidbody2D>();
         HP = 3;
@@ -45,7 +46,7 @@ public class idou : MonoBehaviour{
             paricle.gameObject.SetActive(true);
         }
         if(speedtime <= 0){
-            moveSpeed = 5;
+            moveSpeed = 3;
             speed = false;
             paricle.gameObject.SetActive(false);
             speedtime = 10f;

@@ -64,7 +64,7 @@ public class Dolly : MonoBehaviour{
         }
        }
        if(Track == false){ 
-       dolly.GetComponent<Rigidbody2D>().velocity= vec*15;
+       dolly.GetComponent<Rigidbody2D>().velocity= vec*13;
        } 
     }
     void OnCollisionEnter2D(Collision2D other){
